@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keerthi | Space Portfolio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{
+background:radial-gradient(circle at top,#13254f,#050816,#000);
+color:#fff;overflow-x:hidden;
+}
+.stars{position:fixed;inset:0;z-index:-1}
+.star{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;
+animation:twinkle 2s infinite alternate}
+@keyframes twinkle{from{opacity:.2}to{opacity:1;transform:scale(2)}}
+.planet{position:fixed;left:5%;top:8%;width:140px;height:140px;border-radius:50%;
+background:radial-gradient(circle at 30% 30%,#8fd3ff,#0066ff,#001c5a);
+box-shadow:0 0 35px #4ab0ff}
+.planet:after{content:"";position:absolute;left:-20px;top:50px;width:180px;height:30px;
+border:4px solid rgba(255,255,255,.5);border-radius:50%;transform:rotate(-20deg)}
+.card{
+max-width:760px;margin:80px auto;padding:30px;background:rgba(255,255,255,.08);
+backdrop-filter:blur(12px);border-radius:20px;box-shadow:0 0 20px rgba(255,255,255,.2)
+}
+h1,h2{text-align:center;margin:15px 0}
+p{text-align:center;line-height:1.8}
+hr{border:1px solid rgba(255,255,255,.15);margin:20px 0}
+button{display:block;margin:25px auto;padding:12px 26px;border:none;border-radius:30px;
+background:#00d4ff;font-weight:bold;cursor:pointer}
+button:hover{transform:scale(1.05)}
+.footer{text-align:center;padding:20px;color:#bbb}
+</style>
+</head>
+<body>
+<div class="stars" id="stars"></div>
+<div class="planet"></div>
+
+<div class="card">
+<h1>👋 Hi, I'm Keerthi</h1>
+<p>
+Information Technology Student<br>
+💻 Python Developer<br>
+📊 Data Science Enthusiast<br>
+🌐 Web Development Learner<br>
+🤖 Exploring AI & Machine Learning
+</p>
+
+<hr>
+
+<h2>🚀 About Me</h2>
+<p>
+I am passionate about building modern websites, developing Python applications,
+and solving real-world problems using Data Science and Artificial Intelligence.
+</p>
+
+<hr>
+
+<h2>🛠 Skills</h2>
+<p>
+Python • HTML • CSS • JavaScript • MySQL • Git • GitHub • Jupyter Notebook
+</p>
+
+<hr>
+
+<h2>📂 Projects</h2>
+<p>
+🍽 Zomato Clone<br>
+📱 Instagram Notification System<br>
+🚗 Uber Eats Data Analytics
+</p>
+
+<hr>
+
+<h2>📞 Contact</h2>
+<p>
+📧 keerthichandrasekaran2329@gmail.com<br>
+🌐 github.com/Keerthi2923
+</p>
+
+<button onclick="launch()">🚀 Explore My Universe</button>
+</div>
+
+<div class="footer">Made with ❤️ by Keerthi</div>
+
+<script>
+const stars=document.getElementById('stars');
+for(let i=0;i<220;i++){
+ const s=document.createElement('div');
+ s.className='star';
+ s.style.left=Math.random()*100+'%';
+ s.style.top=Math.random()*100+'%';
+ s.style.animationDelay=Math.random()*2+'s';
+ stars.appendChild(s);
+}
+function launch(){
+ alert("🚀 Welcome to my space portfolio!");
+}
+</script>
+</body>
+</html>
